@@ -9,13 +9,14 @@
 * wie_starten: 1 - pagination und aktuellste Artikel auf Startseite, 
               0 nur die Artikel mit xstart >=1  ,im frontmatter des post gesetzt, auf Startseite anzeigen ,sortiert nach Wert xstart 
               also z.B im FrontMatter xstart: 1 definieren, xstart: 2 wird an 2 Stelle angezeigt 
+              
 * Im Post alle Bilder eines Sets am Ende des Beitrags in 2 Spalten anzeigen -> 
 Bildbeschreibung im Post ueber yaml.datei im Data Verzeichnis einfügen:
   im Frontmatter des Post photoset definieren:
-  ---
-  photos: 
-   set: (Name des Set)
-   size: (Anzahl der Bilder) 
+  ---  
+  photos:   
+   set: (Name des Set)  
+   size: (Anzahl der Bilder)   
   ---
   in ./assets/ Ordner "photosets" erstellen ->
   darin Ordner (Name des Set) erstellen, hierhin alle Bilder reinkopieren und nach (Name des Set)_x umbenennen wobei x Platz Reihenfolge der Anzeige im Post definiert. x muss fortlaufend indiziert sein,
