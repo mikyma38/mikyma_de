@@ -13,11 +13,11 @@
 * Im Post alle Bilder eines Sets am Ende des Beitrags in 2 Spalten anzeigen -> 
 Bildbeschreibung im Post ueber yaml.datei im Data Verzeichnis einfügen:
   im Frontmatter des Post photoset definieren:
-  ---  
+  -----  
   photos:   
    set: (Name des Set)  
    size: (Anzahl der Bilder)   
-  ---
+  -----
   in ./assets/ Ordner "photosets" erstellen ->
   darin Ordner (Name des Set) erstellen, hierhin alle Bilder reinkopieren und nach (Name des Set)_x umbenennen wobei x Platz Reihenfolge der Anzeige im Post definiert. x muss fortlaufend indiziert sein,
   also für ein Set Namens "biker" dann entsprechnd "biker_1.jpg, biker_2.jpg, biker_3.jpg". (muss als endung jpg sein )
