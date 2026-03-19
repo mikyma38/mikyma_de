@@ -10,7 +10,7 @@ Aber auch Dinge wie  Webdesign und allgemein OpenSource, EDV finde ich sehr span
 
 Über diese Dinge und diversen Erfahrungen damit  möchte ich hier auf dieser Website - Blog - Homepage, wie immer man auch das Kind nennen mag, berichten.
 Die diversen Berichte haben sicherlich nicht den Anspruch der Weissheit letzter Schluss bzw "richtig" zu sein.
-Sie beschreiben lediglich meinen Umgang/Lösungsweg zu gewissen Sachchverhalten und geben vielleicht Ideen -
+Sie beschreiben lediglich meinen Umgang/Lösungsweg zu gewissen Sachverhalten und geben vielleicht Ideen -
 oder sind einfach nur *Berichte* (-.
 
 >Viel Spass beim stöbern   
