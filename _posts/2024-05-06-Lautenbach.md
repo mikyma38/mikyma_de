@@ -29,8 +29,8 @@ Zum guten Glück konnte ich das Freitags Abend's reparieren und entschloss mich 
 Eine gute Entscheidung! Tolles Ambiente und die Biker Lautenbach haben richtig was los gemacht.  
 Mein Zelt konnte ich noch im trockenen aufbauen, dann fing es an zu Nieseln.  
 Trotz des eher schlechten Wetter's gut besucht und klasse Stimmung. Auch außerhalb des Festzeltes überdachte Stehtische
-Für das leibliche Wohl war bestens und zu echt fairen Preisen gesorgt!  
-Und der Kaffee sowie die Brötchen mit Wurst,Käse oder süßem  Morgens von den Mädels der Nachtwache  für die Camper war Gold Wert!
+und für das leibliche Wohl war bestens und zu echt fairen Preisen gesorgt!  
+Der Kaffee sowie die Brötchen mit Wurst,Käse oder süßem  Morgens von den Mädels der Nachtwache  für die Camper war Gold Wert!
 
 Die Rückfahrt ist leider etwas ins Wasser gefallen - es war doch recht frisch- und teilweise sehr naß.
 
