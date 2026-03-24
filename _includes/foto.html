@@ -31,7 +31,7 @@
 {% endif %}
 <div class="fb">
  <article style="display: flex;" class="gallery">   
-    <div>
+    <div class="inner_fb">
         {%- for 1 in (1..num) limit: num_div2 offset: o_s -%}
             {%- if page.l_box -%}
                 <a href='{{site.url}}/assets/photosets/{{page.photos.set}}/org/{{page.photos.set}}_g_{{w}}.jpg'>  
@@ -48,7 +48,7 @@
         
     </div> 
     {%- if zuviel > 0 and w > num and sss == false -%} {%- assign cl = " class='weiss'" -%} {%- endif -%}
-    <div{{cl}}>
+    <div class="inner_fb"}>
         {%- for 1 in (1..num)  limit: l_im offset: continue %}
         {%- unless cl -%}
             {%- if page.l_box -%}
