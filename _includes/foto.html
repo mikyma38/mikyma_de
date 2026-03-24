@@ -30,10 +30,16 @@
     {% assign l_im=1 %}  
 {% endif %}
 <div class="fb">
+ <article style="display: flex;" class="gallery">   
     <div>
         {%- for 1 in (1..num) limit: num_div2 offset: o_s -%}
-
+            {%- if page.l_box -%}
+                <a href='{{site.url}}/assets/photosets/{{page.photos.set}}/org/{{page.photos.set}}_g_{{w}}.jpg'>  
+            {%- endif -%}    
             <img src='{{site.url}}/assets/photosets/{{page.photos.set}}/{{page.photos.set}}_{{w}}.jpg' alt='Photo {{ w }} von {{ page.photos.set | capitalize }}'>
+            {%- if page.l_box -%}
+                </a>
+            {%-endif-%}
             {%- if bild_text[w] -%}
                 <div class="bild_beschreibung">{{ bild_text[w] }}</div>
             {%- endif -%}    
@@ -44,11 +50,20 @@
     {%- if zuviel > 0 and w > num and sss == false -%} {%- assign cl = " class='weiss'" -%} {%- endif -%}
     <div{{cl}}>
         {%- for 1 in (1..num)  limit: l_im offset: continue %}
-        {%- unless cl -%}<img src='{{site.url}}/assets/photosets/{{page.photos.set}}/{{page.photos.set}}_{{w}}.jpg'  alt='Photo {{ w }} von {{ page.photos.set | capitalize }}'>{%- endunless -%}
+        {%- unless cl -%}
+            {%- if page.l_box -%}
+                <a href='{{site.url}}/assets/photosets/{{page.photos.set}}/org/{{page.photos.set}}_g_{{w}}.jpg'>  
+            {%- endif -%} 
+            <img src='{{site.url}}/assets/photosets/{{page.photos.set}}/{{page.photos.set}}_{{w}}.jpg'  alt='Photo {{ w }} von {{ page.photos.set | capitalize }}'>
+            {%- if page.l_box -%}
+                </a>
+            {%-endif-%}                
+        {%- endunless -%}
             {%- if bild_text[w] -%}
                 <div class="bild_beschreibung">{{ bild_text[w] }}</div>
             {%- endif -%}    
             {% assign w=w | plus:1 %}
         {% endfor %}
     </div>
+ </article>
 </div>

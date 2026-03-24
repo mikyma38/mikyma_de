@@ -1,5 +1,5 @@
 # Site Build Settings
-url: http://www.mikyma.de
+url: 
 
 
 # Build settings
@@ -43,6 +43,7 @@ defaults:
     show_diagramm: 0  
     author: "Michael Fischer"
     wie_starten: 1
+    l_box: true
 
 exclude:
   - Gemfile

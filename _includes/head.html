@@ -11,6 +11,10 @@
   <meta charset="utf-8">
   <link rel="stylesheet" href="{{ site.github.url }}/assets/css/main.css">
   <link rel="stylesheet" href="{{ site.github.url }}/assets/css/syntax.css">
+  {%- if page.l_box -%}
+    <link rel="stylesheet" href="/assets/css/baguetteBox.min.css">
+    <script src="/assets/js/baguetteBox.min.js" async></script>
+  {%- endif -%}
   <!-- Use Atom -->
   {% feed_meta %}
   <!-- RSS-v2.0
