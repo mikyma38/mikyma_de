@@ -48,7 +48,7 @@
         
     </div> 
     {%- if zuviel > 0 and w > num and sss == false -%} {%- assign cl = " class='weiss'" -%} {%- endif -%}
-    <div class="inner_fb"}>
+    <div class="inner_fb">
         {%- for 1 in (1..num)  limit: l_im offset: continue %}
         {%- unless cl -%}
             {%- if page.l_box -%}
