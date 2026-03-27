@@ -6,27 +6,25 @@
 * wenn anderes image als auf der index.html im Post angezeigt werden soll dann im FrontMatter vom Post: 
  image_p: [bildname]
 
-* wie_starten: 1 - pagination und aktuellste Artikel auf Startseite, 
-              0 nur die Artikel mit xstart >=1  ,im frontmatter des post gesetzt, auf Startseite anzeigen ,sortiert nach Wert xstart 
-              also z.B im FrontMatter xstart: 1 definieren, xstart: 2 wird an 2 Stelle angezeigt 
+* wie_starten config.yml
+  wie_starten: 1 - pagination und aktuellste Artikel auf Startseite, 
+               0 - nur die Artikel mit xstart >=1  ,im frontmatter des post gesetzt, auf Startseite anzeigen ,sortiert nach Wert xstart 
+               also z.B im FrontMatter xstart: 1 definieren, xstart: 2 wird an 2 Stelle angezeigt 
               
 * Im Post alle Bilder eines Sets am Ende des Beitrags in 2 Spalten anzeigen -> 
-Bildbeschreibung im Post ueber yaml.datei im Data Verzeichnis einfügen:
-  im Frontmatter des Post photoset definieren:
-
-  l_box: false //wenn keine Großen Bilder für Baguettebox gallery erstellt werden  
-  photos:   
-   set: (Name des Set)  
-   size: (Anzahl der Bilder)  
-
-  in ./assets/ Ordner "photosets" erstellen ->
-  darin Ordner (Name des Set) erstellen, hierhin alle Bilder reinkopieren und nach (Name des Set)_x umbenennen wobei x Platz Reihenfolge der Anzeige im Post definiert. x muss fortlaufend indiziert sein,
-  also für ein Set Namens "biker" dann entsprechnd "biker_1.jpg, biker_2.jpg, biker_3.jpg". (muss als endung jpg sein )
-  Bilder sollten alle eine Breite von 400px haben.
-  Wenn große Bilder für die Lightbox gebraucht werden dann in den Ordner org des entsprechenden photosets kopieren. Diese muessen den gleichen Namen wie die kleinen Bilder haben ergeäznt durch "g_" vor der BildNr
-  also "biker_g_1.jpg, biker_g_2.jpg, biker_g_3.jpg"
-
-
+  Bildbeschreibung im Post ueber yaml.datei im Data Verzeichnis einfügen (optional):
+  -im Frontmatter des Post photoset definieren:
+   l_box: false //wenn keine Großen Bilder für Baguettebox gallery erstellt werden  
+   photos:   
+     set: (Name des Set)  
+     size: (Anzahl der Bilder)  
+  -in ./assets/ Ordner "photosets/(Name des Set)" erstellen ->
+   hierhin alle Bilder reinkopieren und nach (Name des Set)_x umbenennen wobei x Platz Reihenfolge der Anzeige im Post definiert. x muss fortlaufend indiziert sein,
+   also für ein Set Namens "biker" dann entsprechnd "biker_1.jpg, biker_2.jpg, biker_3.jpg". (muss als endung jpg sein )
+   Bilder sollten alle eine Breite von 400px haben.
+   Wenn große Bilder für die Lightbox gebraucht werden dann in den Ordner org des entsprechenden photosets kopieren. Diese muessen den gleichen Namen wie die kleinen Bilder haben ergeäznt durch "g_" vor der BildNr
+   also "biker_g_1.jpg, biker_g_2.jpg, biker_g_3.jpg"
+  
   Um Bildbeschreibungen hinzuzufügen im Verzeichnis ./data/ einen Ordner mit dem namen des sets erstellen.
   dann in selbigem im yaml format datei nach folgendem Schema erstellen;
     - |
@@ -43,10 +41,7 @@ Bildbeschreibung im Post ueber yaml.datei im Data Verzeichnis einfügen:
 
 *  Die Photosets lassen sich auch in  mehreren zeilen a 2 bilder getrennt von Absätzen anzeigen:
    dafür an die Stellen wo jeweils eine Zeile Bilder erscheinen soll 
-   $-$ eintragen! $-$ wird dann durch die 2 Bilder ersetzt    
-
-
-    
+   $-$ eintragen! $-$ wird dann durch die 2 Bilder ersetzt        
 
 
 # org Millenial:
