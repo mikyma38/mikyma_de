@@ -43,7 +43,7 @@ defaults:
     show_diagramm: 0  
     author: "Michael Fischer"
     wie_starten: 1
-    l_box: true
+    l_box: false
 
 exclude:
   - Gemfile

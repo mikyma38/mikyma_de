@@ -2,24 +2,24 @@
 layout: post
 ---
 
-
-{% assign ist_komplett = true %}
-{% for h in (0..10) %}
-  {% if content  contains "$-$" %}
-    {% assign ist_komplett = false %}
-    {% capture yy:  %}
-      {% include foto.html istk_plett=ist_komplett off_s=h %}
-    {% endcapture %} 
-    {% assign content = content | replace_first: "$-$", yy  %}   
-  {% else %}
-    {% break %}  
-  {% endif %}
-{% endfor %}
-{% unless ist_komplett %}
+<div class="photo_set">
+{%- assign ist_komplett = true -%}
+{%- for h in (0..10) -%}
+  {%- if content  contains "$-$" -%}
+    {%- assign ist_komplett = false -%}
+    {%- capture yy:  -%}
+      {%- include foto.html istk_plett=ist_komplett off_s=h -%}
+    {%- endcapture -%} 
+    {%- assign content = content | replace_first: "$-$", yy  -%}   
+  {%- else -%}
+    {%- break -%}  
+  {%- endif -%}
+{%- endfor -%}
+{%- unless ist_komplett -%}
  {{ content }} 
-{% else %} 
+{%- else -%} 
  {{ content }} 
- {% include foto.html istk_plett=ist_komplett %} 
-{% endunless %}
- 
+ {%- include foto.html istk_plett=ist_komplett -%} 
+{%- endunless -%}
+</div> 
  

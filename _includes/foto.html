@@ -1,40 +1,40 @@
-{% assign sss = include.istk_plett %}
-{% if sss == empty %}
-  {% assign sss = false %} 
-{% endif %}  
-{% assign o_s = include.off_s %}
-{% if o_s == empty %}
-  {% assign o_s = false %} 
-{% endif %}  
-{% unless sss %}
-    {% if o_s == 0 %}
-    {% assign o_s = 1 %}
-    {% assign w=1 %}
-    {% else %} 
-        {% assign o_s = o_s | plus: 2 %} 
-    {% endif %}
-{% endunless %}
-{% assign bild_text = "" | split: "," %} 
+{%- assign sss = include.istk_plett -%}
+{%- if sss == empty -%}
+  {%- assign sss = false -%} 
+{%- endif -%}  
+{%- assign o_s = include.off_s -%}
+{%- if o_s == empty -%}
+  {%- assign o_s = false -%} 
+{%- endif -%}  
+{%- unless sss -%}
+    {%- if o_s == 0 -%}
+    {%- assign o_s = 1 -%}
+    {%- assign w=1 -%}
+    {%- else -%} 
+        {%- assign o_s = o_s | plus: 2 -%} 
+    {%- endif -%}
+{%- endunless -%}
+{%- assign bild_text = "" | split: "," -%} 
 
-{% for member in site.data.photosets.[page.photos.set] %}
-    {% assign bild_text = bild_text | push: member %}
-{% endfor %}
-{% assign num = page.photos.size %}
+{%- for member in site.data.photosets.[page.photos.set] -%}
+    {%- assign bild_text = bild_text | push: member -%}
+{%- endfor -%}
+{%- assign num = page.photos.size -%}
 {%- assign zuviel = num | modulo:2 -%}
-{% if sss %}
-    {% assign num_div2 = page.photos.size | divided_by: 2 %} 
-    {% assign l_im = num %}
-    {% assign w=1 %}
-{% else %}
-    {% assign num_div2 = 1 %}
-    {% assign l_im=1 %}  
-{% endif %}
+{%- if sss -%}
+    {%- assign num_div2 = page.photos.size | divided_by: 2 -%} 
+    {%- assign l_im = num -%}
+    {%- assign w=1 -%}
+{%- else -%}
+    {%- assign num_div2 = 1 -%}
+    {%- assign l_im=1 -%}  
+{%- endif -%}
 <div class="fb">
  <article style="display: flex;" class="gallery">   
     <div class="inner_fb">
         {%- for 1 in (1..num) limit: num_div2 offset: o_s -%}
             {%- if page.l_box -%}
-                <a href='{{site.url}}/assets/photosets/{{page.photos.set}}/org/{{page.photos.set}}_g_{{w}}.jpg'>  
+                <a href='{{site.url}}/assets/photosets/{{page.photos.set}}/org/{{page.photos.set}}_g_{{w}}.jpg' data-caption='{{ bild_text[w] }}'>  
             {%- endif -%}    
             <img src='{{site.url}}/assets/photosets/{{page.photos.set}}/{{page.photos.set}}_{{w}}.jpg' alt='Photo {{ w }} von {{ page.photos.set | capitalize }}'>
             {%- if page.l_box -%}
@@ -52,7 +52,7 @@
         {%- for 1 in (1..num)  limit: l_im offset: continue %}
         {%- unless cl -%}
             {%- if page.l_box -%}
-                <a href='{{site.url}}/assets/photosets/{{page.photos.set}}/org/{{page.photos.set}}_g_{{w}}.jpg'>  
+                <a href='{{site.url}}/assets/photosets/{{page.photos.set}}/org/{{page.photos.set}}_g_{{w}}.jpg' data-caption='{{ bild_text[w] }}'>  
             {%- endif -%} 
             <img src='{{site.url}}/assets/photosets/{{page.photos.set}}/{{page.photos.set}}_{{w}}.jpg'  alt='Photo {{ w }} von {{ page.photos.set | capitalize }}'>
             {%- if page.l_box -%}
