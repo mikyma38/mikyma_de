@@ -11,14 +11,14 @@ Die [Baguettebox Gallerie][1] , geschrieben in reinem javascript , ist wirklich 
 inJekyll zu integrieren! lediglich die beiden Dateien aus dem dist Verzeichnis 
 per Script Tag ins Dokument laden
 
-```javascript
+```html
 <link rel="stylesheet" href="css/baguetteBox.min.css">
 <script src="js/baguetteBox.min.js" async></script>
 ```
 
 und am Ende des Dokuments nochmal per Event handler starten.  
 
-```javascript
+```html
 <script>
 window.addEventListener('load', function() {
   baguetteBox.run('.gallery');
